@@ -6,6 +6,8 @@ class Therapist < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+  
+  before_save :ensure_authentication_token
 
   def skip_confirmation!
     self.confirmed_at = Time.now
