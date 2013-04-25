@@ -1,0 +1,102 @@
+2013-04-24T18:29:10.388263+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"FdstvphGPa+mfReeE5whW/QGFhMfAHF7TKncTsEZtIk=", "therapist"=>{"email"=>"mikepatterson77+2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+2013-04-24T18:29:10.387579+00:00 app[web.1]: Processing by Devise::SessionsController#create as HTML
+2013-04-24T18:29:10.388263+00:00 app[web.1]: Redirected to http://expresso2.herokuapp.com/
+2013-04-24T18:29:10.388413+00:00 app[web.1]: Completed 302 Found in 242ms (ActiveRecord: 0.0ms)
+2013-04-24T18:55:31.908375+00:00 heroku[web.1]: Idling
+2013-04-24T18:55:35.171074+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2013-04-24T18:55:35.963581+00:00 app[web.1]: [2013-04-24 18:55:35] ERROR SignalException: SIGTERM
+2013-04-24T18:55:35.963581+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2013-04-24T18:55:52.746582+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2013-04-24T18:55:52.746582+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2013-04-24T18:55:54.587565+00:00 heroku[web.1]: Process exited with status 137
+2013-04-24T18:55:54.595288+00:00 heroku[web.1]: State changed from up to down
+2013-04-25T15:02:20.250474+00:00 heroku[web.1]: Unidling
+2013-04-25T15:02:20.251833+00:00 heroku[web.1]: State changed from down to starting
+2013-04-25T15:02:22.010875+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 14297`
+2013-04-25T15:02:25.875847+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-04-25T15:02:25.875847+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-04-25T15:02:30.973216+00:00 app[web.1]: => Ctrl-C to shutdown server
+2013-04-25T15:02:30.973216+00:00 app[web.1]: Connecting to database specified by DATABASE_URL
+2013-04-25T15:02:30.973216+00:00 app[web.1]: => Booting WEBrick
+2013-04-25T15:02:30.973216+00:00 app[web.1]: => Rails 3.2.11 application starting in production on http://0.0.0.0:14297
+2013-04-25T15:02:30.973216+00:00 app[web.1]: => Call with -d to detach
+2013-04-25T15:02:34.612368+00:00 app[web.1]: [2013-04-25 15:02:34] INFO  WEBrick 1.3.1
+2013-04-25T15:02:34.612368+00:00 app[web.1]: [2013-04-25 15:02:34] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2013-04-25T15:02:34.612760+00:00 app[web.1]: [2013-04-25 15:02:34] INFO  WEBrick::HTTPServer#start: pid=2 port=14297
+2013-04-25T15:02:34.816561+00:00 heroku[web.1]: State changed from starting to up
+2013-04-25T15:02:36.424006+00:00 app[web.1]: Started POST "/api/v1/registrations" for 165.123.85.156 at 2013-04-25 15:02:36 +0000
+2013-04-25T15:02:36.644283+00:00 app[web.1]: Processing by Api::V1::RegistrationsController#create as JSON
+2013-04-25T15:02:36.644283+00:00 app[web.1]:   Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+3@gmail.com", "name"=>"mikepatterson77+3@gmail.com"}, "registration"=>{"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+3@gmail.com", "name"=>"mikepatterson77+3@gmail.com"}}}
+2013-04-25T15:02:36.976976+00:00 app[web.1]: Completed 422 Unprocessable Entity in 332ms (Views: 0.4ms | ActiveRecord: 177.1ms)
+2013-04-25T15:02:36.984161+00:00 heroku[router]: at=info method=POST path=/api/v1/registrations host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=2ms service=639ms status=422 bytes=93
+2013-04-25T15:03:49.024201+00:00 app[web.1]: Started GET "/" for 165.123.85.156 at 2013-04-25 15:03:49 +0000
+2013-04-25T15:03:49.028171+00:00 app[web.1]: Processing by HomeController#index as HTML
+2013-04-25T15:03:49.106841+00:00 heroku[router]: at=info method=GET path=/ host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=3ms service=83ms status=200 bytes=652
+2013-04-25T15:03:49.099243+00:00 app[web.1]:   Rendered home/index.html.erb within layouts/application (12.5ms)
+2013-04-25T15:03:49.100923+00:00 app[web.1]: Completed 200 OK in 73ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+2013-04-25T15:03:49.253093+00:00 heroku[router]: at=info method=GET path=/assets/application-1b13569e9620782f423d4cd3ce931750.css host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=2ms service=8ms status=304 bytes=0
+2013-04-25T15:03:49.274925+00:00 heroku[router]: at=info method=GET path=/assets/application-f1fdba3a9340fdbc1ec24be10f8d4a54.js host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=6ms service=6ms status=304 bytes=0
+2013-04-25T15:03:49.511471+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=2ms service=6ms status=304 bytes=0
+2013-04-25T15:03:51.711653+00:00 heroku[router]: at=info method=POST path=/therapists/sign_in host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=2ms service=80ms status=200 bytes=1782
+2013-04-25T15:03:51.681547+00:00 app[web.1]:   Parameters: {"authenticity_token"=>"Ab/E4Uq+KjKBI/9rBu4noXKpyiH8fTR7HhtIaIjXJ+Q="}
+2013-04-25T15:03:51.677821+00:00 app[web.1]: Started GET "/therapists/sign_in" for 165.123.85.156 at 2013-04-25 15:03:51 +0000
+2013-04-25T15:03:51.681360+00:00 app[web.1]: Processing by Devise::SessionsController#new as HTML
+2013-04-25T15:03:51.699061+00:00 app[web.1]:   Rendered devise/shared/_links.erb (2.2ms)
+2013-04-25T15:03:51.700638+00:00 app[web.1]: Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+2013-04-25T15:03:51.699366+00:00 app[web.1]:   Rendered devise/sessions/new.html.erb within layouts/application (14.4ms)
+2013-04-25T15:04:08.325748+00:00 app[web.1]: Started POST "/therapists/sign_in" for 165.123.85.156 at 2013-04-25 15:04:08 +0000
+2013-04-25T15:04:08.329140+00:00 app[web.1]: Processing by Devise::SessionsController#create as HTML
+2013-04-25T15:04:08.329232+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ab/E4Uq+KjKBI/9rBu4noXKpyiH8fTR7HhtIaIjXJ+Q=", "therapist"=>{"email"=>"mikepatterson77+3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+2013-04-25T15:04:08.358442+00:00 app[web.1]: Completed 401 Unauthorized in 29ms
+2013-04-25T15:04:08.388763+00:00 app[web.1]: Processing by Devise::SessionsController#new as HTML
+2013-04-25T15:04:08.388763+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ab/E4Uq+KjKBI/9rBu4noXKpyiH8fTR7HhtIaIjXJ+Q=", "therapist"=>{"email"=>"mikepatterson77+3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+2013-04-25T15:04:08.498626+00:00 app[web.1]:   Rendered devise/shared/_links.erb (2.3ms)
+2013-04-25T15:04:08.498626+00:00 app[web.1]:   Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+2013-04-25T15:04:08.499704+00:00 app[web.1]: Completed 200 OK in 111ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+2013-04-25T15:04:08.511556+00:00 heroku[router]: at=info method=POST path=/therapists/sign_in host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=2ms service=189ms status=200 bytes=1835
+2013-04-25T15:06:38.483436+00:00 app[web.1]: Started POST "/api/v1/registrations" for 165.123.85.156 at 2013-04-25 15:06:38 +0000
+2013-04-25T15:06:38.493145+00:00 app[web.1]: Processing b
+y Api::V1::RegistrationsController#create as JSON
+2013-04-25T15:06:38.493275+00:00 app[web.1]:   Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+5@gmail.com", "name"=>"mikepatterson77+5@gmail.com"}, "registration"=>{"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+5@gmail.com", "name"=>"mikepatterson77+5@gmail.com"}}}
+2013-04-25T15:06:38.502618+00:00 app[web.1]: Completed 422 Unprocessable Entity in 9ms (Views: 2.5ms | ActiveRecord: 3.9ms)
+2013-04-25T15:06:38.507208+00:00 heroku[router]: at=info method=POST path=/api/v1/registrations host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=2ms service=27ms status=422 bytes=93
+2013-04-25T15:10:28.738379+00:00 app[web.1]: Started POST "/api/v1/registrations" for 165.123.85.156 at 2013-04-25 15:10:28 +0000
+2013-04-25T15:10:28.769205+00:00 app[web.1]:   Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+7@gmail.com", "name"=>"mikepatterson77+7@gmail.com"}, "registration"=>{"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+7@gmail.com", "name"=>"mikepatterson77+7@gmail.com"}}}
+2013-04-25T15:10:28.761238+00:00 app[web.1]: Processing by Api::V1::RegistrationsController#create as JSON
+2013-04-25T15:10:28.787601+00:00 app[web.1]: Completed 422 Unprocessable Entity in 18ms (Views: 11.5ms | ActiveRecord: 2.7ms)
+2013-04-25T15:10:28.793630+00:00 heroku[router]: at=info method=POST path=/api/v1/registrations host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=15ms service=56ms status=422 bytes=93
+2013-04-25T15:13:44.120397+00:00 app[web.1]: Started GET "/api/v1/registrations" for 165.123.85.156 at 2013-04-25 15:13:44 +0000
+2013-04-25T15:13:44.123466+00:00 app[web.1]: 
+2013-04-25T15:13:44.123466+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/api/v1/registrations"):
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:136:in `forward'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:245:in `fetch'
+2013-04-25T15:13:44.123466+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:185:in `lookup'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:51:in `call'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+2013-04-25T15:13:44.123900+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-cache-1.2/lib/rack/cache/context.rb:66:in `call!'
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+2013-04-25T15:13:44.124204+00:00 app[web.1]: 
+2013-04-25T15:13:44.124204+00:00 app[web.1]: 
+2013-04-25T15:13:44.124204+00:00 app[web.1]:   /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+2013-04-25T15:23:06.078879+00:00 app[web.1]: Started POST "/api/v1/registrations" for 165.123.85.156 at 2013-04-25 15:23:06 +0000
+2013-04-25T15:23:06.084051+00:00 app[web.1]:   Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+9@gmail.com", "name"=>"mikepatterson77+9@gmail.com"}, "registration"=>{"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"mikepatterson77+9@gmail.com", "name"=>"mikepatterson77+9@gmail.com"}}}
+2013-04-25T15:23:06.083816+00:00 app[web.1]: Processing by Api::V1::RegistrationsController#create as JSON
+2013-04-25T15:23:06.087994+00:00 app[web.1]: Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+2013-04-25T15:23:06.104509+00:00 heroku[router]: at=info method=POST path=/api/v1/registrations host=expresso2.herokuapp.com fwd="165.123.85.156" dyno=web.1 connect=8ms service=28ms status=422 bytes=93

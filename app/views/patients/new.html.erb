@@ -1,0 +1,16 @@
+Enter New Patient Information
+<hr>
+<%= form_for ([:therapist, @patient]) do |f| %>
+Email: <%= f.text_field :email %><br />
+First Name: <%= f.text_field :firstName %><br />
+Last Name: <%= f.text_field :lastName %><br />
+Sex: <%= f.text_field :sex %><br />
+Date of Birth: <%= f.text_field :dateOfBirth %><br />
+Phone Number: <%= f.text_field :phoneNumber %><br />
+Mailing Address: <%= f.text_field :mailingAddress %><br />
+Emergency Contact Person: <%= f.text_field :emergencyContactPerson %><br />
+Emergency Contact Number: <%= f.text_field :emergencyContactNumber %><br />
+Previous/Existing Diagnoses: <%= f.text_field :existingDiagnoses %><br />
+Current Medication: <%= f.text_field :currentMedication %><br />
+<%= f.submit %>
+<% end -%>

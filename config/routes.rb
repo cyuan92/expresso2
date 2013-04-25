@@ -1,17 +1,22 @@
 Expresso2::Application.routes.draw do
-  devise_for :therapists
+  devise_for :therapists 
 
-  root :to => 'home#index'
+  root :to => 'home#show'
+
+  resources :therapists do
+    resources :patients
+  end
 
   namespace :api do
     namespace :v1 do
       devise_scope :therapist do
         post 'registrations' => 'registrations#create', :as => 'register'
         post 'sessions' => 'sessions#create', :as => 'login'
-        delete 'sessions' => 'sessions#destroy', :as => 'logout'
+        delete 'sessions' => 'sessions#destroy', :as => 'logout'      
       end
     end
   end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

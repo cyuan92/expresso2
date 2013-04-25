@@ -12,4 +12,7 @@ class Therapist < ActiveRecord::Base
   def skip_confirmation!
     self.confirmed_at = Time.now
   end
+
+  has_many :patients
+
 end

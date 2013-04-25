@@ -1,8 +1,16 @@
 <% if therapist_signed_in? %>
 
 <h3>You have successfully signed in, <%= current_therapist.email %></h3>
-
-<%= link_to "Add New Patient", new_therapist_patient_path(@therapist, @patient) %>
+<h4>Your patients:</h4>
+<% if !@patients.blank? %>
+   <% for patient in @patients %>
+      <%= patient.firstName %> <%= patient.lastName %> <br />
+   <% end %>
+<% else %>
+     no patients! <br />
+<% end %>
+ 
+<%= link_to "Add New Patient", new_therapist_patient_path(current_therapist, @patient) %>
 <%= link_to "Sign Out", destroy_therapist_session_path, :method => :delete %>
 
 <% else %>
@@ -12,3 +20,4 @@
 <%= link_to "Sign Up", new_therapist_registration_path, :method => :get %>
 
 <% end %>
+

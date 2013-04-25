@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  firstName: MyString
+  lastName: MyString
+  sex: MyString
+  dateOfBirth: MyString
+  phoneNumber: MyString
+  mailingAddress: MyString
+  emergencyContactPerson: MyString
+  emergencyContactNumber: MyString
+  existingDiagnoses: MyString
+  currentMedication: MyString
+  therapist_id: 1
+
+two:
+  email: MyString
+  firstName: MyString
+  lastName: MyString
+  sex: MyString
+  dateOfBirth: MyString
+  phoneNumber: MyString
+  mailingAddress: MyString
+  emergencyContactPerson: MyString
+  emergencyContactNumber: MyString
+  existingDiagnoses: MyString
+  currentMedication: MyString
+  therapist_id: 1
