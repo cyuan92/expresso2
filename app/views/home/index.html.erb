@@ -3,12 +3,12 @@
 <h3>You have successfully signed in, <%= current_therapist.email %></h3>
 <%= link_to "Sign Out", destroy_therapist_session_path, :method => :delete %>
 
+<%= retrieveAllPatients %>
+
 <% else %>
 
 <h1> Welcome to Expresso</h1>
 <%= link_to "Sign In", new_therapist_session_path, :method => :get %>
 <%= link_to "Sign Up", new_therapist_registration_path, :method => :get %>
-
-<%= retrieveAllPatients %>
 
 <% end %>
