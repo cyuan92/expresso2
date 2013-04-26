@@ -4,26 +4,27 @@ module PatientsHelper
 
 		# Hard-coded bucket_name. Must be changed later to address multiple patients
 		bucket_name = "recordings77"
-
+		
+                therapist_name = therapist_email.partition("@")[0]
+                patient_name = @patient.email.partition("@")[0]
 		#therapist_name = "conyuan"
 		# get an instance of the S3 interface using the default configuration
 		s3=AWS::S3.new
 
 		# create a bucket
-		b = s3.buckets.create(bucket_name)
-
-                html = "\n"
+		b = s3.buckets.create(bucket_name)		
 		#html << "<p> Your email " + current_therapist.email
 		#html << "<p> Your email: "+email
 		# retrieve the filenames of all recordings
+		html = "<ul>\n"
 		b.objects.each do |obj|			
-			if obj.key.match(@therapist_name.to_s+"\/"+@patient_name.to_s+"\/$")			   
-				html << "<ul>"
-				html << retrieveAllRecordings(b, @therapist_name.to_s, @patient_name.to_s).to_s
-				html << "</ul>\n"				
+			if obj.key.match(therapist_name+ "\/" + patient_name + "\/+[A-Z a-z]+\/$")			   
+				html << "<li>"+patient_name+"<br/><ul>"
+				html << retrieveAllRecordings(b, therapist_name, patient_name).to_s
+				html << "</ul></li>\n"				
 			end	
 		end
-		
+		html<< "</ul>"
 		html.html_safe		
 	end
 
