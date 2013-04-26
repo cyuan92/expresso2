@@ -18,7 +18,7 @@ require 'aws-sdk'
 config_file = File.join(File.dirname(__FILE__),
                         "config.yml")
 unless File.exist?(config_file)
-  puts << END
+  puts <<END
 To run the samples, put your credentials in config.yml as follows:
 
 access_key_id: YOUR_ACCESS_KEY_ID
@@ -31,7 +31,7 @@ end
 config = YAML.load(File.read(config_file))
 
 unless config.kind_of?(Hash)
-  puts << END
+  puts <<END
 config.yml is formatted incorrectly.  Please use the following format:
 
 access_key_id: YOUR_ACCESS_KEY_ID

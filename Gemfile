@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise' 
-
+gem 'nokogiri'
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
