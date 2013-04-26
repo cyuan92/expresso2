@@ -9,4 +9,7 @@
 <b>Previous/Existing Diagnoses: </b> <%= @patient.existingDiagnoses %> <br />
 <b>Current Medication: </b> <%= @patient.currentMedication %> <br /></p>
 
+<b>Recordings: </b><br />
+<%= retrieveAllPatients %> <br />
+
 <%= link_to "Return to Home Page", root_path %> 
