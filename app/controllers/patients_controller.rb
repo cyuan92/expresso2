@@ -17,4 +17,9 @@ class PatientsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def show
+    @therapist = current_therapist
+    @patient = @therapist.patients.find(params[:id]) 
+  end
 end

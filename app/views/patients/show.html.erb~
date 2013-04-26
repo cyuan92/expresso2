@@ -1,0 +1,12 @@
+<h1><%= @patient.firstName %> <%= @patient.lastName %></h1>
+<b>Email:</b> <%= @patient.email %> <br />
+<b>Sex: </b> <%= @patient.sex %> <br />
+<b>Date of Birth: </b> <%= @patient.dateOfBirth %> <br />
+<b>Phone Number: </b> <%= @patient.phoneNumber %> <br />
+<b>Mailing Address: </b> <%= @patient.mailingAddress %> <br />
+<b>Emergency Contact Person: </b> <%= @patient.emergencyContactPerson %> <br />
+<b>Emergency Contact Number: </b> <%= @patient.emergencyContactNumber %> <br />
+<b>Previous/Existing Diagnoses: </b> <%= @patient.existingDiagnoses %> <br />
+<b>Current Medication: </b> <%= @patient.currentMedication %> <br />
+
+<%= link_to "Return to Home Page", root_path %> 
