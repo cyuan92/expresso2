@@ -1,21 +1,20 @@
+<img src="/expressologo.jpg" alt="Expresso" />
 <% if therapist_signed_in? %>
 
-<h3>You have successfully signed in, <%= current_therapist.email %></h3>
-<h4>Your patients:</h4>
+<h4>You have successfully signed in, <%= current_therapist.email %></h4>
+
+<h3>Your Patients:</h3>
 <% if !@patients.blank? %>
    <% @therapist.patients.each do |patient| %>
      <%= link_to patient.firstName + " " + patient.lastName, therapist_patient_path(@therapist, patient) %> <br /> 
    <% end %>
 <% else %>
-     No patients! <br />
+     You have no patients! <br />
 <% end %>
-
-<h4>Available recordings: </h4>
-<%= retrieveAllPatients %>
- 
-<%= link_to "Add New Patient", new_therapist_patient_path(current_therapist, @patient) %>
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+<p><%= link_to "Add New Patient", new_therapist_patient_path(current_therapist, @patient) %> &#65073;
 <%= link_to "Sign Out", destroy_therapist_session_path, :method => :delete %>
-
+</p>
 <% else %>
 
 <h1> Welcome to Expresso</h1>
