@@ -5,6 +5,8 @@
 <%= link_to "Add New Patient", new_therapist_patient_path(@therapist, @patient) %>
 <%= link_to "Sign Out", destroy_therapist_session_path, :method => :delete %>
 
+<%= retrieveAllPatients %>
+
 <% else %>
 
 <h1> Welcome to Expresso</h1>
